@@ -4,7 +4,7 @@
 
 ### Live slides
 
-Go to https://github.com/arthurio/2022-06-denver-api-meetup
+Go to https://arthurio.github.io/2022-06-denver-api-meetup/
 You can press the `s` key to see the speaker notes.
 
 ### PDF
