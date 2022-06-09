@@ -73,22 +73,134 @@
                         # Pick your channels and vendors
 
                         Note:
-                          Like Monk would say, it's a gift... and a curse. It's awesome to have so many APIs, but... Every API is different!
+                          Like Monk would say, "it's a gift... and a curse!" It's awesome to have so many APIs, but... Every API is different!
                           What if you could just configure your new provider via a wizard and flip the switch?
                     </section>
                 </section>
                 <section>
                     <section data-markdown>
-                        # What are we focusing on right now?
+                        # What key features have we built?
+                    </section>
+                    <section data-markdown>
+                        ## Integrations
 
-                        -
+                        - **Sms**: Twilio, AWS SNS, Ringcentral
+                        - **Email**: Sendgrid, AWS SES
+                        - **Platforms**: Slack, Discord
+                        - **Mobile** push: Firebase (Google), Apns (Apple)
+                    </section>
+                    <section data-markdown>
+                        ## Rules engine
+
+                        - **Conditional**: Send only if condition is met
+                        - **Frequency**: Send every time, only once, every time threshold is met, stop after X notifications, etc.
+                    </section>
+                    <section data-markdown>
+                        ## "Time travel"
+
+                        - Scheduled event reminder
+                        - Survey
+                        - Delay
+                        - Time of the day
+
+                        Note:
+                            If you have ever had to work with dates, time, and timezones, you must know how challenging it can become.
+                    </section>
+                    <section data-markdown>
+                        ## Analytics
+
+                        - Sent
+                        - Failed
+                        - Excluded
+                        - Delivered
+                        - Scheduled
+
+                        Note:
+                            Users can also go look at the provider's data for more detailed analytics
+                    </section>
+                    <section data-markdown>
+                        ## Message customization
+
+                        - UI to edit templates + Jinja or Mustache
+                        - Language variations
+
+                        Note:
+                            This is somewhat decoupled from the snippet. A project manager or marketing person can go in and change the copy as long as they don't introduce new dynamic variables.
+                    </section>
+                    <section data-markdown>
+                        ## Inspire
+
+                        - Collect what well known companies do and turn it into a library of templates
+                        - Case by case suggestions from our founders
+                    </section>
+                    <!-- XXX(arthurio): Skip this? -->
+                    <!-- <section data-markdown> -->
+                    <!--     ## Campaigns -->
+
+                    <!--     - CSV -->
+                    <!--     - Amplitude -->
+                    <!-- </section> -->
+                </section>
+                <section>
+                    <section data-markdown>
+                        # What are we focusing on right now?
+                    </section>
+                    <section data-markdown>
+                        ## Automation
+
+                        Group multiple notifications under one snippet to setup cadences, like a user onboarding for the
+                        first 7 days.
+                    </section>
+                    <section data-markdown>
+                        ## AI powered content
+
+                        - AI recommended messaging plans
+                        - AI generated copy for notifications
                     </section>
                 </section>
                 <section>
+                    <section data-markdown>
+                        # What's next?
+                    </section>
+                    <section data-markdown>
+                        ## Integrations
+
+                        - **More channels**: web push, other platforms
+                        - **More vendors**: Mailchimp, SendInBlue, Postmark, Telnyx, Campfire, etc.
+                        - Provision third party accounts
+                    </section>
+                    <section data-markdown>
+                        ## Profiles
+
+                        - Enables more complex rules
+                        - Content creators can update messages without changing the snippet
+                    </section>
+                    <section data-markdown>
+                        ## Deployment/setup
+
+                        - Terraform module
+                        - On site solution
+                    </section>
+                </section>
+                <section data-markdown>
+                    # Conlusion
+
+                    Use a SAAS product!
+                </section>
+                <section>
                     <h1>Q&A</h1>
-                    <p><img style="margin: -10px 15px;" height="50px" src="images/linkedin.png"/><a style="text-decoration: none;" href="https://www.linkedin.com/in/arthurio/" target="_blank">linkedin.com/in/arthurio</a></p>
-                    <p><img style="margin: -10px 15px;" height="50px" src="images/notivize.png"/><a style="text-decoration: none;" href="https://notivize.com" target="_blank">notivize.com</a></p>
-                    <p><img style="margin: -10px 15px;" height="50px" src="images/github.png"/><a style="text-decoration: none;" href="https://github.com/arthurio/pre-commit" target="_blank">github.com/arthurio/pre-commit</a></p>
+                    <p>
+                        <img style="margin: -10px 15px;" height="50px" src="images/linkedin.png"/>
+                        <a style="text-decoration: none;" href="https://www.linkedin.com/in/arthurio/" target="_blank">linkedin.com/in/arthurio</a>
+                    </p>
+                    <p>
+                        <img style="margin: -10px 15px;" height="50px" src="images/notivize.png"/>
+                        <a style="text-decoration: none;" href="https://notivize.com" target="_blank">notivize.com</a>
+                    </p>
+                    <p>
+                        <img style="margin: -10px 15px;" height="50px" src="images/github.png"/>
+                        <a style="text-decoration: none;" href="https://github.com/arthurio" target="_blank">github.com/arthurio</a>
+                    </p>
                 </section>
 			</div>
 		</div>
