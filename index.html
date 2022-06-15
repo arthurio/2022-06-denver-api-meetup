@@ -17,7 +17,7 @@
 		<div class="reveal">
 			<div class="slides">
                 <section>
-                    <h3>How and why you should leverage low code solutions for your notification system</h3>
+                    <h3>How and why you should <span style="color: #77BAF9;">leverage low code</span> solutions for your <span style="color: #77BAF9;">notification system</span></h3>
                     <img width="300px" src="images/notivize.png"/>
                     <aside class="notes">
                         <p>I'm Arthur Rio, CTO at Notivize. We are a low code notification system platform.</p>
@@ -55,15 +55,23 @@
                              - Status updates
                              - etc.
 
+                          What happen if you don't write notifications?
+
+                          People just forget about you
+
+                          People are busy and 90% will drop off and abandon, even higher for mobile apps
                     </section>
                     <section data-markdown>
                         ## You quickly need to scale in all directions
 
+                        ![directions](images/directions.png)
+
+
+                        Note:
                           - Multiple notifications
                           - Different channels/vendors
                           - Volume increase
 
-                        Note:
                           Hard coded notifications
 
                           Email, sms, push, web push, slack, discord
@@ -72,13 +80,11 @@
 
                           Like Monk would say, "it's a gift... and a curse!" It's awesome to have so many APIs, but... Every API is different!
 
-                          The engineering team is busy, so usually nothing gets done...
-
                           It's a must to keep users engaged on day one and provide a delightful on-boarding experience.
 
-                          - Change the copy -> low code
-                          - Don't send twice the same notification
-                          - Etc.
+                          It's hard to know what channels will become important
+                          like in crypto -> discord
+                          Asia -> what's app
                     </section>
                 </section>
                 <section>
@@ -95,6 +101,7 @@
                                 <h3>Sms</h3>
 
                                 <p>
+                                    <img height="100px" src="images/notivize-small.png"/>
                                     <img height="100px" src="images/twilio.png"/>
                                     <img height="100px" src="images/sns.png"/>
                                     <img height="100px" src="images/ringcentral.png"/>
@@ -112,6 +119,7 @@
                                 <h3>Email</h3>
 
                                 <p>
+                                    <img height="100px" src="images/notivize-small.png"/>
                                     <img height="100px" src="images/sendgrid.png"/>
                                     <img height="100px" src="images/ses.png"/>
                                 </p>
@@ -134,11 +142,19 @@
                     <section>
                         <h2>Rules engine</h2>
 
-                        <img height="600px" src="images/slack-notification-diagram.jpg"/>
+                        <div class="container">
+                            <div class="col">
+                                <img src="images/rules-1.png"/>
+                            </div>
+                            <div class="col">
+                                <img src="images/rules-2.png"/>
+                            </div>
+                            <div class="col">
+                                <img src="images/rules-3.png"/>
+                            </div>
+                        </div>
 
                         <aside class="notes">
-                            <p>This is the famous diagram that shows how slack determines where/how/when to send notifications.</p>
-
                             <p>We focus on 2 things:
 
                                 <ul>
@@ -165,32 +181,47 @@
                             It's important to understand how your communication performs and to be able to tune it
                             without the involvement of the engineering team.
                     </section>
-                    <section data-markdown>
-                        ## Content creation
+                    <section>
+                        <h2>Content management</h2>
 
-                        ![notivize ai writer](images/ai-writer.png)
+                        <img height="600px" src="images/templating.png"/>
 
-                        Note:
-                            This is somewhat decoupled from the snippet. A project manager or marketing person can go in
+                        <aside class="notes">
+                            <p>This is somewhat decoupled from the snippet.</p>
+                            <p> A project manager or marketing person can go in
                             and change the copy without having to bug the dev team (as long as they don't introduce new
-                            dynamic variables).
+                            dynamic variables).</p>
 
-                        - UI to edit templates + Jinja or Mustache
-                        - Language variations
-                        - AI generated content
-                        - Profiles
-                        # TODO(arthurio): Profiles as a separate slide?
+                            <ul>
+                                <li>UI to edit templates + Jinja or Mustache</li>
+                                <li>Language variations</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Content creation</h2>
+
+                        <div class="container">
+                            <div class="col">
+                                <img src="images/messaging-plan.png"/>
+                            </div>
+                            <div class="col">
+                                <img src="images/ai-writer.png"/>
+                            </div>
+                        </div>
+                        <a src="https://notivize.com/suggest/">https://notivize.com/suggest/</a>
+
+                        <aside class="notes">
+
+                            - AI generated content
+                            - Profiles
+                        </aside>
                     </section>
                     <section>
                         <h2>Inspire</h2>
 
-                        <div class="container">
-                            <div class="col">
-                                <img src="images/inspire-1.png"/>
-                            </div>
-                            <div class="col">
-                                <img src="images/inspire-2.png"/>
-                            </div>
+                        <div class="col">
+                            <img width="100%" src="images/inspire.png"/>
                         </div>
 
                         <aside class="notes">
