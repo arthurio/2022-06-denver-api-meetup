@@ -18,208 +18,215 @@
 			<div class="slides">
                 <section>
                     <h3>How and why you should leverage low code solutions for your notification system</h3>
-                    <h4>🚀 ✉️ 🚀</h4>
+                    <img width="300px" src="images/notivize.png"/>
                     <aside class="notes">
+                        <p>I'm Arthur Rio, CTO at Notivize. We are a low code notification system platform.</p>
+
                         <p>This is a mouthful of a title, what's important here?</p>
                         <ul>
                             <li>Notification systems are pretty important, it can be powerful tool or a disaster.</li>
-                            <li>Low code. Doesn't mean no code. We try to make it as easy as possible for project managers and marketing to do their part without having to constently ping the dev team.</li>
+                            <li>
+                                Low code. Doesn't mean no code. We try to make it as easy as possible for project
+                                managers and marketing to do their part without having to constently ping the dev team.
+                            </li>
                         </ul>
-                    </aside>
-                </section>
-                <section>
-                    <p>
-                        <img style="margin: -10px 15px;" height="50px" src="images/linkedin.png"/>
-                        <a style="text-decoration: none;" href="https://www.linkedin.com/in/arthurio/" target="_blank">linkedin.com/in/arthurio</a>
-                    </p>
-                    <p>
-                        <img style="margin: -10px 15px;" height="50px" src="images/notivize.png"/>
-                        <a style="text-decoration: none;" href="https://notivize.com" target="_blank">notivize.com</a>
-                    </p>
-                    <p>
-                        <img style="margin: -10px 15px;" height="50px" src="images/github.png"/>
-                        <a style="text-decoration: none;" href="https://github.com/arthurio" target="_blank">github.com/arthurio</a>
-                    </p>
-                    <p>
-                        <img style="margin: -10px 15px;" height="50px" src="images/gmail.png"/>
-                        <a style="text-decoration: none;" href="mailto:arthur@notivize.com" target="_blank">arthur@notivize.com</a>
-                    </p>
-                    <aside class="notes">
-                        <p>I'm Arthur Rio, CTO at Notivize. We are a low code notification system platform so I should be pretty well positioned to talk about that subject.</p>
                     </aside>
                 </section>
                 <section>
                     <section data-markdown>
                         # Why did we start Notivize?
 
-                        ![Notivize](images/notivize.png)
+                        ![Notivize](images/notification-liecycle.png)
                     </section>
                     <section data-markdown>
                         ## Everybody needs notifications
 
-                          - Onboarding new users
-                          - Internal messages
-                          - Reminders
-                          - One time passwords
-                          - Status updates
-                          - etc.
+                        ![Use cases](images/use-cases.png)
 
                         Note:
-                          How many of you have had to code notifications for your app? What did that entail? Custom logic? Building APIs? Maintaining a database? Templates? Crons?
+                          How many of you have had to code notifications for your app?
+
+                          What did that entail? Custom logic? Building APIs? Maintaining a database? Templates? Crons?
+
+                             - Onboarding new users
+                             - Internal messages
+                             - Reminders
+                             - One time passwords
+                             - Status updates
+                             - etc.
+
                     </section>
                     <section data-markdown>
-                        ## You quickly need a solution that can scale
+                        ## You quickly need to scale in all directions
+
+                          - Multiple notifications
+                          - Different channels/vendors
+                          - Volume increase
 
                         Note:
-                          For any startup, it's probably fine to start with hardcoded one off notifications, but what happens when you need to scale that to more channels, vendors, track analytics, customize text, ensure that you don't send twice the same notification, etc.?
-                    </section>
-                    <section data-markdown>
-                        ## Multiple channels and vendors
+                          Hard coded notifications
 
-                        Note:
+                          Email, sms, push, web push, slack, discord
+
+                          sendgrid mailchimp twilio AWS sns/ses
+
                           Like Monk would say, "it's a gift... and a curse!" It's awesome to have so many APIs, but... Every API is different!
-                          What if you could just configure your new provider via a wizard and flip the switch?
+
+                          The engineering team is busy, so usually nothing gets done...
+
+                          It's a must to keep users engaged on day one and provide a delightful on-boarding experience.
+
+                          - Change the copy -> low code
+                          - Don't send twice the same notification
+                          - Etc.
                     </section>
                 </section>
                 <section>
                     <section data-markdown>
-                        # What key features have we built?
+                        # What do people want?
+
+                        ![features](images/features.jpeg)
+                    </section>
+                    <section>
+                        <h2>Integrations</h2>
+
+                        <div class="container">
+                            <div class="col">
+                                <h3>Sms</h3>
+
+                                <p>
+                                    <img height="100px" src="images/twilio.png"/>
+                                    <img height="100px" src="images/sns.png"/>
+                                    <img height="100px" src="images/ringcentral.png"/>
+                                </p>
+
+                                <h3>Team Messaging</h3>
+
+                                <p>
+                                    <img height="100px" src="images/slack.png"/>
+                                    <img height="100px" src="images/discord.png"/>
+                                </p>
+                            </div>
+
+                            <div class="col">
+                                <h3>Email</h3>
+
+                                <p>
+                                    <img height="100px" src="images/sendgrid.png"/>
+                                    <img height="100px" src="images/ses.png"/>
+                                </p>
+
+                                <h3>Mobile Push</h3>
+
+                                <p>
+                                    <img height="100px" src="images/firebase.png"/>
+                                    <img height="100px" src="images/apns.png"/>
+                                </p>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            Start with a few options for each major channels.
+
+                            We let you start with few free sms/emails but you'll quickly need to plug in your own
+                            integration. We are looking into provisioning.
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Rules engine</h2>
+
+                        <img height="600px" src="images/slack-notification-diagram.jpg"/>
+
+                        <aside class="notes">
+                            <p>This is the famous diagram that shows how slack determines where/how/when to send notifications.</p>
+
+                            <p>We focus on 2 things:
+
+                                <ul>
+                                    <li>Conditional: Send only if condition is met</li>
+                                    <li>Schedule: event reminder, survey, delay</li>
+                                    <li>Frequency: Only once (Welcome email), every time (OTP), every time threshold is met (temperature alert)
+                                </ul>
+
+                                For every time, Stop after X notifications, etc.
+                            </p>
+
+
+                            <h4>Automations</h4>
+                            <p>Group multiple notifications under one snippet to setup cadences, like a user onboarding for the
+                            first 7 days.</p>
+                        </aside>
                     </section>
                     <section data-markdown>
-                        ## Integrations
+                        ## A/B Testing and Analytics
 
-                        - **Sms**: Twilio, AWS SNS, Ringcentral
-                        - **Email**: Sendgrid, AWS SES
-                        - **Platforms**: Slack, Discord
-                        - **Mobile** push: Firebase (Google), Apns (Apple)
-                    </section>
-                    <section data-markdown>
-                        ## Rules engine
-
-                        - **Conditional**: Send only if condition is met
-                        - **Frequency**: Send every time, only once, every time threshold is met, stop after X notifications, etc.
-                    </section>
-                    <section data-markdown>
-                        ## "Time travel"
-
-                        - Scheduled event reminder
-                        - Survey
-                        - Delay
-                        - Time of the day
+                        # 📊
 
                         Note:
-                            If you have ever had to work with dates, time, and timezones, you must know how challenging it can become.
+                            It's important to understand how your communication performs and to be able to tune it
+                            without the involvement of the engineering team.
                     </section>
                     <section data-markdown>
-                        ## Analytics
+                        ## Content creation
 
-                        - Sent
-                        - Failed
-                        - Excluded
-                        - Delivered
-                        - Scheduled
+                        ![notivize ai writer](images/ai-writer.png)
 
                         Note:
-                            Users can also go look at the provider's data for more detailed analytics
-                    </section>
-                    <section data-markdown>
-                        ## Message customization
+                            This is somewhat decoupled from the snippet. A project manager or marketing person can go in
+                            and change the copy without having to bug the dev team (as long as they don't introduce new
+                            dynamic variables).
 
                         - UI to edit templates + Jinja or Mustache
                         - Language variations
-
-                        Note:
-                            This is somewhat decoupled from the snippet. A project manager or marketing person can go in and change the copy as long as they don't introduce new dynamic variables.
+                        - AI generated content
+                        - Profiles
+                        # TODO(arthurio): Profiles as a separate slide?
                     </section>
-                    <section data-markdown>
-                        ## Inspire
+                    <section>
+                        <h2>Inspire</h2>
 
-                        - Collect what well known companies do and turn it into a library of templates
-                        - Case by case suggestions from our founders
-                    </section>
-                    <!-- XXX(arthurio): Skip this? -->
-                    <!-- <section data-markdown> -->
-                    <!--     ## Campaigns -->
+                        <div class="container">
+                            <div class="col">
+                                <img src="images/inspire-1.png"/>
+                            </div>
+                            <div class="col">
+                                <img src="images/inspire-2.png"/>
+                            </div>
+                        </div>
 
-                    <!--     - CSV -->
-                    <!--     - Amplitude -->
-                    <!-- </section> -->
-                </section>
-                <section>
-                    <section data-markdown>
-                        # What are we focusing on right now?
-                    </section>
-                    <section data-markdown>
-                        ## Automation
-
-                        Group multiple notifications under one snippet to setup cadences, like a user onboarding for the
-                        first 7 days.
-                    </section>
-                    <section data-markdown>
-                        ## AI powered content
-
-                        - AI recommended messaging plans
-                        - AI generated copy for notifications
+                        <aside class="notes">
+                            <p>Collect what well known companies do and turn it into a library of templates.</p>
+                            <p>Consulting: Case by case suggestions from our founders.</p>
+                        </aside>
                     </section>
                 </section>
                 <section>
                     <section data-markdown>
-                        # What's next?
-                    </section>
-                    <section data-markdown>
-                        ## Integrations
+                    # Conclusion
 
-                        - **More channels**: web push, other platforms
-                        - **More vendors**: Mailchimp, SendInBlue, Postmark, Telnyx, Campfire, etc.
-                        - Provision third party accounts
-                    </section>
-                    <section data-markdown>
-                        ## Profiles
+                    ![Saas](images/saas.png)
 
-                        - Enables more complex rules
-                        - Content creators can update messages without changing the snippet
+                    Note:
+                        Don't build it yourself, but do use notifications to delight your users!
                     </section>
-                    <section data-markdown>
-                        ## Deployment/setup
-
-                        - Terraform module
-                        - On site solution
+                    <section>
+                        <h1>Q&A</h1>
+                        <p>
+                            <img style="margin: -10px 15px;" height="50px" src="images/linkedin.png"/>
+                            <a style="text-decoration: none;" href="https://www.linkedin.com/in/arthurio/" target="_blank">linkedin.com/in/arthurio</a>
+                        </p>
+                        <p>
+                            <img style="margin: -10px 15px;" height="50px" src="images/notivize-small.png"/>
+                            <a style="text-decoration: none;" href="https://notivize.com" target="_blank">notivize.com</a>
+                        </p>
+                        <p>
+                            <img style="margin: -10px 15px;" height="50px" src="images/github.png"/>
+                            <a style="text-decoration: none;" href="https://github.com/arthurio" target="_blank">github.com/arthurio</a>
+                        </p>
+                        <p>
+                            <img style="margin: -10px 15px;" height="50px" src="images/gmail.png"/>
+                            <a style="text-decoration: none;" href="mailto:arthur@notivize.com" target="_blank">arthur@notivize.com</a>
+                        </p>
                     </section>
-                    <section data-markdown>
-                        ## A/B testing
-
-                        Compare performances between 2 versions of the same notification, between different channels, etc.
-                    </section>
-                    <section data-markdown>
-                        ## AI
-
-                        - Better integrated in the creation process
-                        - Smarter (it's at the toddler stage right now)
-                    </section>
-                </section>
-                <section data-markdown>
-                    # Conlusion
-
-                    Don't build it yourself, but do use notifications to delight your users!
-                </section>
-                <section>
-                    <h1>Q&A</h1>
-                    <p>
-                        <img style="margin: -10px 15px;" height="50px" src="images/linkedin.png"/>
-                        <a style="text-decoration: none;" href="https://www.linkedin.com/in/arthurio/" target="_blank">linkedin.com/in/arthurio</a>
-                    </p>
-                    <p>
-                        <img style="margin: -10px 15px;" height="50px" src="images/notivize.png"/>
-                        <a style="text-decoration: none;" href="https://notivize.com" target="_blank">notivize.com</a>
-                    </p>
-                    <p>
-                        <img style="margin: -10px 15px;" height="50px" src="images/github.png"/>
-                        <a style="text-decoration: none;" href="https://github.com/arthurio" target="_blank">github.com/arthurio</a>
-                    </p>
-                    <p>
-                        <img style="margin: -10px 15px;" height="50px" src="images/gmail.png"/>
-                        <a style="text-decoration: none;" href="mailto:arthur@notivize.com" target="_blank">arthur@notivize.com</a>
-                    </p>
                 </section>
 			</div>
 		</div>
